@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-active {
+      @apply p-3 rounded-lg bg-white text-black outline outline-offset-2 outline-2 outline-indigo-600 hover:opacity-80 transition-all font-medium;
+    }
+
+    .btn-inactive{
+        @apply p-3 rounded-lg bg-indigo-600 text-white hover:opacity-80 transition-all font-medium;
+    }
+  }
