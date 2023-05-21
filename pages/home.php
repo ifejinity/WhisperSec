@@ -56,17 +56,19 @@
                 if ($resultPost->num_rows > 0) {
                 while($row = $resultPost->fetch_assoc()) {
             ?>
+                <form action="../php/delete.php" method="post">
                     <div class="w-[300px] flex flex-col bg-indigo-100 rounded-lg p-5 gap-3">
                         <h1 class="font-medium text-indigo-600"><?php echo $row["username"] ?></h1>
                         <p class=""><?php echo $row["post"] ?></p>
                         <input type="hidden" name="id" value="<?php echo $row["postid"] ?>">
                         <div class="flex flex-row justify-end gap-4">
-                            <button class="p-2 rounded-lg bg-indigo-50 text-black focus:outline focus:outline-offset-2 focus:outline-2 
+                            <button type="submit" class="p-2 rounded-lg bg-indigo-50 text-black focus:outline focus:outline-offset-2 focus:outline-2 
                             outline-indigo-600 hover:opacity-80 transition-all font-medium bottom-5 right-0 w-[80px]" name="" id="">Replies</button>
-                            <button class="p-2 rounded-lg bg-indigo-600 text-white focus:outline focus:outline-offset-2 focus:outline-2 
-                            outline-indigo-600 hover:opacity-80 transition-all font-medium bottom-5 right-0 w-[80px]" name="" id="">Delete</button>
+                            <button type="submit" class="p-2 rounded-lg bg-indigo-600 text-white focus:outline focus:outline-offset-2 focus:outline-2 
+                            outline-indigo-600 hover:opacity-80 transition-all font-medium bottom-5 right-0 w-[80px]" name="delete" id="">Delete</button>
                         </div>
                     </div>
+                </form>
             <?php
                 }
                 }
