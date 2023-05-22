@@ -26,7 +26,9 @@
                 <h1 class="text-indigo-600 font-black text-2xl">Sign in your Account</h1>
             </div>
 
-            <form method="POST" action="./php/signin.php" class="flex flex-col gap-5">
+            <form method="POST" action="./php/signin.php" class="flex flex-col gap-5 justify-center items-center">
+                
+
                 <div class="grid xs:grid-cols-2 grid-cols-1 w-full gap-3">
                     <input type="text" placeholder="Username"
                     class="p-2 outline-none border-b-2 border-indigo-600" name="inUser" id="inUser">
@@ -75,6 +77,9 @@
             <button id="signupButton" class="">Sign up</button>
         </div>
 
+        <div class="fixed bottom-0 w-full flex flex-col text-center bg-indigo-900 p-5 text-white">
+            <h1 class="font-medium">Developed By: Jeffrey Lonzanida</h1>
+        </div>
     </div>
 
     <script src="./index.js"></script>

@@ -1,8 +1,9 @@
 <?php
     session_start();
     include '../conn.php';
+
     if(isset($_POST["delete"])){
-        $post = $_POST["id"];
+        $post = $_POST["postid"];
         $deletePost = "DELETE FROM post WHERE postid = '$post'";
         if ($conn->query($deletePost)) {
             header("Location: ../pages/home.php");
@@ -30,6 +31,12 @@
             "
             ;
         }
-        $conn->close();
     }
+
+    if(isset($_POST["comments"])){
+        $_SESSION["id"] = $_POST["postid"];
+        header("Location: ../pages/comments.php");
+    }
+    
+    $conn->close();
 ?>
