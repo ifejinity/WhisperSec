@@ -38,6 +38,22 @@
 
 <body class=" bg-indigo-50 flex justify-center">
 
+    <!-- url modal -->
+    <div class="w-full h-screen fixed z-[2] bg-black/30 hidden justify-center items-center" id="modalCopyUrl">
+        <div class="w-full max-w-[500px] h-fit bg-indigo-50 rounded-lg mx-[5%] md:mx-[10%] p-5 flex flex-col gap-5">
+            <div class="flex w-full justify-between items-center">
+                <h1 class="text-indigo-600 font-bold text-2xl">Share your post</h1>
+            </div>
+            <div action="../php/create.php" method="post" class="gap-5 flex flex-col">
+                <div id="qrcode"></div>
+                <input class="p-2 outline-none rounded-lg" id="url"
+                 value = <?php echo "http://localhost/whispersec/php/url.php?postID=$postid"?> readonly>
+                <button class="p-3 rounded-lg bg-indigo-600 text-white focus:outline focus:outline-offset-2 focus:outline-2 
+                outline-indigo-600 hover:opacity-80 transition-all font-medium w-[100px] self-end" id="close">Okay</button>
+            </div>
+        </div>
+    </div>
+
     <div class="h-full flex flex-col relative mx-[5%] md:mx-[10%] max-w-[1440px] w-full mb-20">
         <header class="w-full flex justify-between items-center py-5">
             <a href="../pages/home.php" class="text-indigo-600 font-bold text-[25px]"><?php echo $username ?></a>
@@ -54,7 +70,7 @@
                 <!-- search post -->
                 <div class="w-full flex flex-col">
                     <h1 class="text-[25px] font-bold">Search Post</h1>
-                    <form action="../php/search.php" method="post" class="w-full">
+                    <form action="../php/search.php" method="get" class="w-full">
                         <div class="flex flex-row w-full gap-2">
                             <input type="text" placeholder="Post ID"
                             class="p-2 outline-none border-b-2 border-indigo-600 arrow w-full" name="postID" id="postID" required>
@@ -118,11 +134,19 @@
             </div>
         </div>
     </div>
-    <script>
+    <script type="text/javascript">
         const share = document.querySelector("#share");
+        const modalCopy = document.querySelector("#modalCopyUrl");
+
         share.addEventListener("click", function(){
-            alert("This is your Post ID: " + <?php echo $postid?>);
+            modalCopy.style.display = "flex";
         }); 
+
+        const closeUrl = document.querySelector("#close");
+
+        closeUrl.addEventListener("click", function(){
+            modalCopy.style.display = "none";
+        });
     </script>
 </body>
 

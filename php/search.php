@@ -1,9 +1,9 @@
 <?php
     session_start();
     include '../conn.php';
-
-    if(isset($_POST["search"])){
-        $postid = $_POST["postID"];
+    // http://localhost/whispersec/php/search.php?postID=80&search=
+    if(isset($_GET["search"])){
+        $postid = $_GET["postID"];
         $sql = "SELECT * FROM post WHERE postid = '$postid'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
