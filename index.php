@@ -17,12 +17,16 @@
     <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body class="px-[5%] md:px-[10%] bg-indigo-200">
-    <div class="w-full h-screen flex flex-col justify-center items-center gap-6">
+    <div class="w-full h-screen flex flex-col justify-center items-center gap-6 relative">
+        <!-- <img src="./src//resources/logo.png" class="w-[50vw] min-w-[300px]
+            absolute top-0 z-[-1]" alt="" srcset=""> -->
 
         <!-- sign in -->
-        <div class="max-w-[500px] w-full h-fit shadow-2xl rounded-lg hidden flex-col gap-5 p-5 bg-indigo-50"
+        <div class="max-w-[500px] w-full h-fit shadow-2xl rounded-lg hidden flex-col gap-5 p-5 bg-indigo-50 relative"
         id="signinForm">
-            <div class="full">
+                <img src="./src//resources/logo.png" class="w-[150px] bg-white rounded-full border-[10px] border-indigo-200
+                absolute m-auto top-[-100px] self-center" alt="" srcset="">
+            <div class="full mt-[40px]">
                 <h1 class="text-indigo-600 font-black text-2xl">Sign in your Account</h1>
             </div>
 
@@ -44,9 +48,11 @@
         </div>
 
         <!-- sign up -->
-        <div class="max-w-[500px] w-full h-fit shadow-2xl rounded-lg hidden flex-col gap-5 p-5 bg-indigo-50"
+        <div class="max-w-[500px] w-full h-fit shadow-2xl rounded-lg hidden flex-col gap-5 p-5 bg-indigo-50 relative"
         id="signupForm">
-            <div class="full">
+            <img src="./src//resources/logo.png" class="w-[150px] bg-white rounded-full border-[10px] border-indigo-200
+                absolute m-auto top-[-100px] self-center" alt="" srcset="">
+            <div class="full mt-[40px]">
                 <h1 class="text-indigo-600 font-black text-2xl">Sign up an Account</h1>
             </div>
 
