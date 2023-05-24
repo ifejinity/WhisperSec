@@ -30,6 +30,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/resources/logo.png">
     <title>WhisperSec | Comments</title>
     <link rel="stylesheet" href="../dist/output.css">
     <!-- bootstrap icon -->
@@ -118,7 +119,7 @@
                         while($rowcomment = $resultcomment->fetch_assoc()) {
                 ?>
                             <div class="w-[245px] flex flex-col bg-indigo-50 rounded-lg p-5 gap-3 h-fit break-words">
-                                <h1 class="font-medium text-indigo-600">Anonymous</h1>
+                                <h1 class="font-medium text-indigo-600"><?php echo $rowcomment["sender"] ?></h1>
                                 <p class=""><?php echo $rowcomment["message"] ?></p>
                             </div>
                 <?php
