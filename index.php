@@ -17,8 +17,8 @@
     <!-- tailwind -->
     <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="px-[5%] md:px-[10%] bg-indigo-200">
-    <div class="w-full h-screen flex flex-col justify-center items-center gap-6 relative">
+<body class="px-[5%] md:px-[10%] bg-indigo-200 flex justify-center items-center h-full xs:h-screen">
+    <div class="w-full h-fit flex flex-col justify-center items-center gap-6 relative py-[100px]">
         <!-- <img src="./src//resources/logo.png" class="w-[50vw] min-w-[300px]
             absolute top-0 z-[-1]" alt="" srcset=""> -->
 
@@ -79,14 +79,13 @@
             </form>
         </div>
 
-        <div class="max-w-[500px] w-full grid xs:grid-cols-2 grid-cols-1 gap-3 text-center">
+        <div class="max-w-[500px] w-full grid xs:grid-cols-2 grid-cols-1 gap-3 text-center relative">
             <button id="signinButton" class="">Sign in</button>
             <button id="signupButton" class="">Sign up</button>
         </div>
-
-        <div class="fixed bottom-0 w-full flex flex-col text-center bg-indigo-900 p-5 text-white">
-            <h1 class="font-medium">Developed By: Jeffrey Lonzanida</h1>
-        </div>
+    </div>
+    <div class="fixed bottom-0 w-full flex flex-col text-center bg-indigo-900 p-5 text-white">
+        <h1 class="font-medium">Developed By: Jeffrey Lonzanida</h1>
     </div>
 
     <script src="./index.js"></script>
